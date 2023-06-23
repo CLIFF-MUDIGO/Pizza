@@ -4,7 +4,7 @@ class CreateRestaurantPizzas < ActiveRecord::Migration[7.0]
       t.references :restaurant, null: false, foreign_key: true
       t.references :pizza, null: false, foreign_key: true
       t.integer :price
-      t.text :special_instructions
+     
       t.timestamps
     end
   end

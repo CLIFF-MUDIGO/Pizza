@@ -14,8 +14,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_23_080352) do
   create_table "pizzas", force: :cascade do |t|
     t.string "name"
     t.string "ingredients"
-    t.text "description"
-    t.decimal "price", precision: 5, scale: 2
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -24,7 +22,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_23_080352) do
     t.integer "restaurant_id", null: false
     t.integer "pizza_id", null: false
     t.integer "price"
-    t.text "special_instructions"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["pizza_id"], name: "index_restaurant_pizzas_on_pizza_id"
@@ -34,8 +31,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_23_080352) do
   create_table "restaurants", force: :cascade do |t|
     t.string "name"
     t.string "address"
-    t.string "phone_number"
-    t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
